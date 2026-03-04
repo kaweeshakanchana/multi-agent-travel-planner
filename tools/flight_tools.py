@@ -4,7 +4,7 @@ import requests
 from langchain_core.tools import tool
 from pydantic import BaseModel, Field
 
-from app.config import settings
+from ..config import settings
 
 
 class FlightSearchInput(BaseModel):
