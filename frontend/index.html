@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Travel Planner</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background-overlay"></div>
+    <div class="app-container">
+      <!-- Chat Panel -->
+      <div class="chat-panel">
+        <div class="chat-header">
+          <h2>Travel Agent</h2>
+          <span class="status-indicator"></span>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+          <div class="message assistant">
+            <div class="message-content">
+              Hello! I am your AI travel agent. Where would you like to travel?
+              I'll handle your entire trip from planning to booking.
+            </div>
+          </div>
+        </div>
+
+        <div class="loading-indicator" id="loading-indicator">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+
+        <div class="chat-input">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="e.g. I want to travel from Tokyo to Seoul..."
+            autocomplete="off"
+          />
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+
+      <!-- Summary Panel -->
+      <div class="summary-panel">
+        <div class="summary-header">
+          <h2>Trip Summary</h2>
+        </div>
+        <div class="summary-content">
+          <div class="summary-section" id="requirements-section">
+            <h3><span class="step-num">1</span> Requirements</h3>
+            <div class="content" id="requirements-content">
+              No travel requirements gathered yet.
+            </div>
+          </div>
+
+          <div class="summary-section" id="itinerary-section">
+            <h3><span class="step-num">2</span> Itinerary</h3>
+            <div class="content" id="itinerary-content">
+              No itinerary generated yet.
+            </div>
+          </div>
+
+          <div class="summary-section" id="bookings-section">
+            <h3><span class="step-num">3</span> Confirmed Bookings</h3>
+            <div class="content" id="bookings-content">
+              No bookings confirmed yet.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

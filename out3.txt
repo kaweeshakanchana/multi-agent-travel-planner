@@ -1,0 +1,80 @@
+Sending msg 1...
+Traceback (most recent call last):
+  File "D:\multi-agent-travel-planner\test_chat.py", line 35, in <module>
+    test_flow()
+  File "D:\multi-agent-travel-planner\test_chat.py", line 20, in test_flow
+    travel_graph.invoke({"messages": [HumanMessage(content=msg1)]}, config)
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3094, in invoke
+    for chunk in self.stream(
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2669, in stream
+    for _ in runner.tick(
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 71, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\app\agents\travel_system_graph.py", line 26, in requirements_agent_node
+    response = requirements_agent.invoke({"messages": state["messages"]})
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3094, in invoke
+    for chunk in self.stream(
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2669, in stream
+    for _ in runner.tick(
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 71, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langchain\agents\factory.py", line 1261, in model_node
+    model_response = _execute_model_sync(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langchain\agents\factory.py", line 1233, in _execute_model_sync
+    output = model_.invoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5695, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 402, in invoke
+    self.generate_prompt(
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1123, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 933, in generate
+    self._generate_with_cache(
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1235, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1473, in _generate
+    _handle_openai_api_error(e)
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1468, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\openai\_legacy_response.py", line 367, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1204, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\openai\_base_client.py", line 1297, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-travel-planner\.venv\Lib\site-packages\openai\_base_client.py", line 1070, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+During task with name 'model' and id '6f34aee6-9365-d657-8758-9bf427e5369b'
+During task with name 'requirements_agent' and id 'b87dffdc-e9b2-8550-0e16-ba85cf5b150e'

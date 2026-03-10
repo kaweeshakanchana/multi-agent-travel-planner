@@ -1,0 +1,325 @@
+Traceback (most 
+recent call last):
+At line:1 char:1
++ .venv\Scripts\python.
+exe test_chat.py > 
+debug.log 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (Traceback (mo   
+ st recent call las    
+t)::String) [], Re    
+moteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+  File "D:\multi-agent-
+travel-planner\test_cha
+t.py", line 35, in 
+<module>
+    test_flow()
+  File "D:\multi-agent-
+travel-planner\test_cha
+t.py", line 20, in 
+test_flow
+    travel_graph.invoke
+({"messages": [HumanMes
+sage(content=msg1)]}, 
+config)
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\pregel\main.py", 
+line 3094, in invoke
+    for chunk in 
+self.stream(
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\pregel\main.py", 
+line 2669, in stream
+    for _ in 
+runner.tick(
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\pregel\_runner.py", 
+line 167, in tick
+    run_with_retry(
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\pregel\_retry.py", 
+line 71, in 
+run_with_retry
+    return task.proc.in
+voke(task.input, 
+config)
+           ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\_internal\_runnable.
+py", line 656, in 
+invoke
+    input = context.run
+(step.invoke, input, 
+config, **kwargs)
+            ^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\_internal\_runnable.
+py", line 400, in 
+invoke
+    ret = 
+self.func(*args, 
+**kwargs)
+          ^^^^^^^^^^^^^
+^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\app\agen
+ts\travel_system_graph.
+py", line 26, in 
+requirements_agent_node
+    response = requirem
+ents_agent.invoke({"mes
+sages": 
+state["messages"]})
+               ^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\pregel\main.py", 
+line 3094, in invoke
+    for chunk in 
+self.stream(
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\pregel\main.py", 
+line 2669, in stream
+    for _ in 
+runner.tick(
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\pregel\_runner.py", 
+line 167, in tick
+    run_with_retry(
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\pregel\_retry.py", 
+line 71, in 
+run_with_retry
+    return task.proc.in
+voke(task.input, 
+config)
+           ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\_internal\_runnable.
+py", line 656, in 
+invoke
+    input = context.run
+(step.invoke, input, 
+config, **kwargs)
+            ^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langgra
+ph\_internal\_runnable.
+py", line 400, in 
+invoke
+    ret = 
+self.func(*args, 
+**kwargs)
+          ^^^^^^^^^^^^^
+^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langcha
+in\agents\factory.py", 
+line 1261, in 
+model_node
+    model_response = _e
+xecute_model_sync(reque
+st)
+                     ^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langcha
+in\agents\factory.py", 
+line 1233, in 
+_execute_model_sync
+    output = 
+model_.invoke(messages)
+             
+^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langcha
+in_core\runnables\base.
+py", line 5695, in 
+invoke
+    return 
+self.bound.invoke(
+           
+^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langcha
+in_core\language_models
+\chat_models.py", line 
+402, in invoke
+    
+self.generate_prompt(
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langcha
+in_core\language_models
+\chat_models.py", line 
+1123, in 
+generate_prompt
+    return self.generat
+e(prompt_messages, 
+stop=stop, 
+callbacks=callbacks, 
+**kwargs)
+           ^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langcha
+in_core\language_models
+\chat_models.py", line 
+933, in generate
+    self._generate_with
+_cache(
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langcha
+in_core\language_models
+\chat_models.py", line 
+1235, in 
+_generate_with_cache
+    result = 
+self._generate(
+             
+^^^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langcha
+in_openai\chat_models\b
+ase.py", line 1473, in 
+_generate
+    _handle_openai_api_
+error(e)
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\langcha
+in_openai\chat_models\b
+ase.py", line 1468, in 
+_generate
+    raw_response = self
+.client.with_raw_respon
+se.create(**payload)
+                   ^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\openai\
+_legacy_response.py", 
+line 367, in wrapped
+    return cast(LegacyA
+PIResponse[R], 
+func(*args, **kwargs))
+                       
+               
+^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\openai\
+_utils\_utils.py", 
+line 286, in wrapper
+    return func(*args, 
+**kwargs)
+           
+^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\openai\
+resources\chat\completi
+ons\completions.py", 
+line 1204, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\openai\
+_base_client.py", line 
+1297, in post
+    return 
+cast(ResponseT, 
+self.request(cast_to, 
+opts, stream=stream, 
+stream_cls=stream_cls))
+                       
+    ^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\multi-agent-
+travel-planner\.venv\Li
+b\site-packages\openai\
+_base_client.py", line 
+1070, in request
+    raise self._make_st
+atus_error_from_respons
+e(err.response) from 
+None
+openai.RateLimitError: 
+Error code: 429 - 
+{'error': {'message': 
+'You exceeded your 
+current quota, please 
+check your plan and 
+billing details. For 
+more information on 
+this error, read the 
+docs: https://platform.
+openai.com/docs/guides/
+error-codes/api-errors.
+', 'type': 
+'insufficient_quota', 
+'param': None, 'code': 
+'insufficient_quota'}}
+During task with name 
+'model' and id 'd200683
+d-cc8c-9704-0187-c2cda5
+3dcb37'
+During task with name 
+'requirements_agent' 
+and id '78ec9772-dd6f-d
+c2b-786b-1f439b436c07'

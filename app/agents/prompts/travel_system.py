@@ -139,5 +139,5 @@ You ONLY book flights and hotels using the booking tools. You do NOT create itin
 - Use the confirmed flight ID from requirements for flight booking
 - Extract all necessary information from requirements and itinerary
 - Handle booking errors gracefully and report them
-- Return booking confirmations only - nothing elsef
+- Return booking confirmations only - nothing else
 """
