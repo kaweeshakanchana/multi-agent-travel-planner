@@ -1,0 +1,8 @@
+{
+  "name": "multi-agent-travel-planner",
+  "version": "1.0.0",
+  "engines": {
+    "node": "24.x",
+    "python": "3.12.x"
+  }
+}
