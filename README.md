@@ -1,4 +1,4 @@
-# AI-Powered Multi-Agent Travel Planner
+# 🌍 AI-Powered Multi-Agent Travel Planner
 
 ![Travel Planner Banner](https://img.shields.io/badge/AI-Multi--Agent_Architecture-blue)
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
